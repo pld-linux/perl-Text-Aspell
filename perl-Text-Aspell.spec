@@ -1,10 +1,10 @@
 #
 # Conditional build:
-%bcond_with	tests
+%bcond_with	tests	# perform "make check"
 #
 %include	/usr/lib/rpm/macros.perl
-Summary:	Text::Aspell perl module
-Summary(pl.UTF-8):	Moduł perla Text::Aspell
+Summary:	Text::Aspell - Perl interface to the GNU Aspell library
+Summary(pl.UTF-8):	Text::Aspell - perlowy interfejs do biblioteki GNU Aspell
 Name:		perl-Text-Aspell
 Version:	0.08
 Release:	1
@@ -13,16 +13,21 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/Text-Aspell-%{version}.tar.gz
 # Source0-md5:	9be39d6eaa222c10780396188c3567d0
+URL:		http://search.cpan.org/dist/Text-Aspell/
 BuildRequires:	aspell-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Text::Aspell - Perl interface to the GNU Aspell library
+This module provides a Perl interface to the GNU Aspell library. This
+module is to meet the need of looking up many words, one at a time, in
+a single session, such as spell-checking a document in memory.
 
 %description -l pl.UTF-8
-Text::Aspell - Perl interface to the GNU Aspell library
+Ten moduł udostępnia perlowy interfejs do biblioteki GNU Aspell. Ma za
+zadanie sprostać wyszukiwaniu wielu słów, po jednym, w pojedynczej
+sesji, takiej jak sprawdzanie pisowni dokumentu w pamięci.
 
 %prep
 %setup -q -n Text-Aspell-%{version}
