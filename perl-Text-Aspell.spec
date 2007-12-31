@@ -6,13 +6,13 @@
 Summary:	Text::Aspell - Perl interface to the GNU Aspell library
 Summary(pl.UTF-8):	Text::Aspell - perlowy interfejs do biblioteki GNU Aspell
 Name:		perl-Text-Aspell
-Version:	0.08
+Version:	0.09
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/Text-Aspell-%{version}.tar.gz
-# Source0-md5:	9be39d6eaa222c10780396188c3567d0
+# Source0-md5:	67ec8b9c4769969fa714fc25c9c73832
 URL:		http://search.cpan.org/dist/Text-Aspell/
 BuildRequires:	aspell-devel
 BuildRequires:	perl-devel >= 1:5.8.0
