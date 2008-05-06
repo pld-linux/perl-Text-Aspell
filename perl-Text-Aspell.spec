@@ -3,6 +3,8 @@
 %bcond_with	tests	# perform "make check"
 #
 %include	/usr/lib/rpm/macros.perl
+%define		pdir	Text
+%define		pnam	Aspell
 Summary:	Text::Aspell - Perl interface to the GNU Aspell library
 Summary(pl.UTF-8):	Text::Aspell - perlowy interfejs do biblioteki GNU Aspell
 Name:		perl-Text-Aspell
@@ -42,7 +44,7 @@ sesji, takiej jak sprawdzanie pisowni dokumentu w pamięci.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -54,4 +56,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Text/*.pm
 %dir %{perl_vendorarch}/auto/Text/Aspell
 %attr(755,root,root) %{perl_vendorarch}/auto/Text/Aspell/Aspell.so
+%{perl_vendorarch}/auto/Text/Aspell/Aspell.bs
 %{_mandir}/man3/*
