@@ -56,5 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Text/*.pm
 %dir %{perl_vendorarch}/auto/Text/Aspell
 %attr(755,root,root) %{perl_vendorarch}/auto/Text/Aspell/Aspell.so
-%{perl_vendorarch}/auto/Text/Aspell/Aspell.bs
 %{_mandir}/man3/*
