@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make check"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Text
 %define		pnam	Aspell
 Summary:	Text::Aspell - Perl interface to the GNU Aspell library
